@@ -1,0 +1,15 @@
+---
+cds:
+  remote.services:
+  - name: "GWSAMPLE_BASIC"
+    destination:
+      name: "ES5_SAP"
+      suffix: "/sap/opu/odata/iwbep"
+      type: "odata-v2"
+
+---
+spring:
+  config.activate.on-profile: default
+  sql.init.schema-locations: classpath:schema-h2.sql
+cds:
+  datasource.auto-config.enabled: false

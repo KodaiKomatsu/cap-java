@@ -1,0 +1,38 @@
+###
+GET http://localhost:8080/odata/v4/MyBusinessPartnerService/BusinessPartnerFromDb
+Content-Type: application/json
+
+###
+POST http://localhost:8080/odata/v4/MyBusinessPartnerService/BusinessPartnerFromDb
+Content-Type: application/json
+
+{
+    "BusinessPartnerID": "0100000030",
+    "CompanyCode": "XXXSAP",
+    "NumberOfEmployees": 20000,
+    "CreatedAt": "2020-08-04T12:00+09:00"
+}
+
+###
+PATCH http://localhost:8080/odata/v4/MyBusinessPartnerService/BusinessPartnerFromDb('0100000010')
+Content-Type: application/json
+
+{
+    "CompanyCode": "SAP123",
+    "NumberOfEmployees": 25000
+}
+
+### 
+DELETE http://localhost:8080/odata/v4/MyBusinessPartnerService/BusinessPartnerFromDb('0100000000')
+
+
+###
+POST https://toppan-sap-learning-2023-dev-cap-java-handson9999-srv.cfapps.jp10.hana.ondemand.com/odata/v2/MyBusinessPartnerService/BusinessPartnerFromDb
+Content-Type: application/json
+
+{
+    "BusinessPartnerID": "0100000001",
+    "CompanyCode": "SAPtest",
+    "NumberOfEmployees": 20000,
+    "CreatedAt": "2023-12-13T12:00+09:00"
+}
