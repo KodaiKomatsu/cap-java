@@ -3,9 +3,14 @@ cds:
   remote.services:
   - name: "GWSAMPLE_BASIC"
     destination:
-      name: "ES5_SAP"
+      # name: "ES5_SAP"
       suffix: "/sap/opu/odata/iwbep"
       type: "odata-v2"
+      properties:
+        url: https://sapes5.sapdevcenter.com/
+        authentication: BasicAuthentication
+        username: "I558304"
+        password: "Kodai1998"
 
 ---
 spring:
